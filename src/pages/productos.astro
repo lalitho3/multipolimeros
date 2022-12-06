@@ -1,0 +1,82 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout titulo={'Multipolimeros | Nuestros productos'}>
+    <div class="w-screen flex flex-col md:flex-row items-start justify-between">
+        <div class="w-full md:w-1/2 flex flex-col items-center mx-auto p-6">
+            <h2 class="text-2xl  w-full font-semibold p-4 rounded-md bg-blue-800 border-b-4 border-orange-600 text-white text-center mb-4">Polimeros para recubrimientos</h2>
+            <p class="w-full mx-auto mt-0 leading-relaxed">
+                Nuestra principal gama de productos pertenece a la División de Polímeros para Recubrimientos donde incorporamos resinas poliéster modificadas (conocidas comúnmente como alquidálicas o alquídicas). <br>
+
+                Son el alma y corazón de una gran variedad de recubrimientos base solvente, tales como pinturas, barnices, lacas arquitectónicas, industriales, automotrices y para madera. <br>
+
+                Según su formulación y composición, nuestras resinas son ideales para diferentes aplicaciones y le brindan una gran funcionalidad, permitiéndonos ofrecerle soluciones para un amplio espectro de necesidades.
+            </p>
+            <h2 class="p-4 w-full mt-4 bg-orange-600 rounded border-b-4 border-blue-800 text-white font-semibold text-xl">
+                Solicite una cotización
+            </h2>
+            <div class="w-full">
+                <p class=" text-base my-4">  
+                    Si está interesado en nuestros productos, por favor, haga click en el enlace para ir al formato de solicitud de cotización. 
+                    Llénelo y en breve un ejecutivo le contactará con los detalles.
+                </p>
+                <a href="#" class="p-2 bg-orange-600 rounded hover:bg-blue-800 duration-300 font-semibold text-center text-white mx-auto">
+                    Solicite una cotización aquí &rarr;
+                </a>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2 flex flex-col items-center mx-auto p-6">
+            <h2 class="text-2xl  w-full font-semibold p-4 rounded-md bg-orange-600 border-b-4 border-blue-800 text-white text-center mb-4">Polimeros para recubrimientos</h2>
+            <p class="w-full leading-relaxed">Queremos proporcionarle la opción más adecuada a sus necesidades. Por ello, podrá usted encontrar nuestros productos a partir de distintos criterios.</p>
+            
+            <div class="w-full flex items-center shadow-lg justify-between border
+             my-4 border-gray-300 rounded-md hover:bg-blue-800 hover:text-white duration-300">
+                <div class="flex flex-col items-center p-4 ">
+                    <p class="text-xl font-semibold">
+                        Buscar resinas por su aplicación final
+                    </p>
+                    <p class="text-base leading-relaxed">
+                        Elija la resina que resolverá las necesidades específicas del tipo de recubrimiento que desea fabricar o de la aplicación para la que la utilizará.
+                    </p>
+                </div>
+                <a href="/aplicacion-final" class="mx-4 text-5xl">
+                    &rarr;
+                </a>
+            </div>
+
+            <div class="w-full flex items-center shadow-lg justify-between border
+             my-4 border-gray-300 rounded-md hover:bg-blue-800 hover:text-white duration-300">
+                <div class="flex flex-col items-center p-4 ">
+                    <p class="text-xl font-semibold">
+                        Buscar en base al tipo de resinas
+                    </p>
+                    <p class="text-base leading-relaxed">
+                        Elija el producto ideal según
+                        el tipo de resina alquidálica
+                        empleada en su fabricación.
+                    </p>
+                </div>
+                <a href="#" class="mx-4 text-5xl">
+                    &rarr;
+                </a>
+            </div>
+
+            <div class="w-full flex items-center shadow-lg justify-between border
+             my-4 border-gray-300 rounded-md hover:bg-blue-800 hover:text-white duration-300">
+                <div class="flex flex-col items-center p-4 ">
+                    <p class="text-xl font-semibold">
+                        Buscar otros productos para la industria
+                    </p>
+                    <p class="text-base leading-relaxed">
+                        Conozca la oferta de productos que tenemos para usted.
+                    </p>
+                </div>
+                <a href="#" class="mx-4 text-5xl">
+                    &rarr;
+                </a>
+            </div>
+        </div>
+    </div>
+</BaseLayout>

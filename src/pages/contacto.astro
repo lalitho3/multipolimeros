@@ -1,0 +1,94 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout titulo="Multipolimeros | Contacto">
+    <div class="flex flex-col md:flex-row justify-between items-start">
+        <div class="md:w-1/4">
+            <div class="px-8 my-4">
+                <h2 class="p-4 bg-blue-800 rounded border-b-4 border-orange-600 text-white font-semibold text-xl">
+                    Contáctenos
+                </h2>
+                <div>
+                    <p class="text-gray-700 text-base my-4">
+                        <span class="font-semibold">Nos encontramos en:</span>
+                        <strong>Multi Polímeros, S.A. de C.V.</strong>
+                        Otumba No. 2 La Loma
+                        Tlalnepantla Edo. de México
+                        Tel (55) 5365 8777
+                    </p>
+                    
+                </div>
+            </div>
+
+            <div class="px-8 my-2">
+                <h2 class="p-4 bg-orange-600 rounded border-b-4 border-blue-800 text-white font-semibold text-xl">
+                    Solicite una cotización
+                </h2>
+                <div class="w-full">
+                    <p class="text-gray-700 text-base my-4">  
+                        Si está interesado en nuestros productos, por favor, haga click en el enlace para ir al formato de solicitud de cotización. 
+                        Llénelo y en breve un ejecutivo le contactará con los detalles.
+                    </p>
+                    <a href="#" class="p-2 bg-orange-600 rounded hover:bg-blue-800 duration-300 font-semibold text-center text-white">
+                        Solicite una cotización aquí &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="md:w-3/4">
+            <div class="px-8 my-4">
+                <h2 class="p-4 bg-blue-800 rounded border-b-4 border-orange-600 text-white font-semibold text-xl">
+                    Formulario de contacto
+                </h2>
+                <form class="my-4 p-4 border border-gray-200 rounded shadow" onsubmit="handleSubmit()">
+                    <div class="flex flex-col md:flex-row justify-between items-start">
+                        <div class="md:w-1/2 p-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre">
+                                Nombre
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-800 focus:shadow-outline" id="nombre" name="nombre" type="text" placeholder="Nombre">
+                        </div>
+                        <div class="md:w-1/2 p-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="empresa">
+                                Empresa
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-800 focus:shadow-outline" id="empresa" name="empresa" type="text" placeholder="Empresa">
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row justify-between items-start">
+                        <div class="md:w-1/2 p-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="estado">
+                                Estado y País
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-800 focus:shadow-outline" id="estado" name="estado" type="text" placeholder="Estado y País">
+                        </div>
+                        <div class="md:w-1/2 p-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                                Email
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-800 focus:shadow-outline" id="email" name="email" type="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row justify-between items-start">
+                        <div class="md:w-1/2 p-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="telefono">
+                                Teléfono
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-800 focus:shadow-outline" id="telefono" name="telefono" type="text" placeholder="Teléfono">
+                        </div>
+                        <div class="md:w-1/2 p-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="comentarios">
+                                Comentarios
+                            </label>
+                            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-800 focus:shadow-outline" id="comentarios" name="comentarios" placeholder="Comentarios"></textarea>
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Enviar formulario" class="p-2 bg-orange-600 w-full rounded shadow cursor-pointer border-t-4 border-blue-800 font-semibold hover:bg-blue-800 hover:border-orange-600 duration-300 text-white">
+                </form>
+            </div>
+        </div>
+    </div>
+</BaseLayout>
+

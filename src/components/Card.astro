@@ -1,0 +1,20 @@
+---
+const {
+    titulo = 'Sin titulo',
+    imagen = '#',
+    contenido = 'Sin contenido',
+    url = '#'
+} = Astro.props;
+---
+
+<div class="max-w-sm my-0 mx-auto bg-white border border-gray-200 rounded-lg shadow-lg">
+    <a href={url}>
+        <img class="rounded-t-lg mx-auto" src={imagen} alt={titulo} />
+    </a>
+    <div class="p-5">
+        <a href={url}>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-orange-500">{titulo}</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700">{contenido}</p>
+    </div>
+</div>

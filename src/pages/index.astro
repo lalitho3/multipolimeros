@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const data = [
+	{
+		titulo: 'Empresa 100% mexicana',
+		imagen: '/images/card01.jpg',
+		contenido: 'MultiPolímeros es una empresa dedicada al desarrollo, fabricación y comercialización de resinas y especialidades químicas principalmente para la industria de los recubrimientos. Orgullosamente, contamos con tecnología propia desarrollada 100% en México lo que nos ha permitido acumular la suficiente experiencia para ofrecer a todos nuestros clientes alternativas de alta calidad y desempeño.',
+		url: '/'
+	},
+	{
+		titulo: 'Amplia gama de productos',
+		imagen: '/images/card02.jpg',
+		contenido: 'Nuestra gama de productos esta dividida en dos grandes grupos: * Polímeros para recubrimientos hechos a base de resinas de poliéster modficadas o alquidálicas.     *Materias primas para recubrimientos, como dispersantes, secantes, pigmentos, solventes, aditivos y resinas.',
+		url: '/'
+	},
+	{
+		titulo: 'Nuestros servicios',
+		imagen: '/images/card03.jpg',
+		contenido: 'Le ofrecemos también servicios de maquila de resinas y de recubrimientos. Adicionalmente podemos hacer para usted la mezcla y fusión de distintos productos químicos. Consúltenos para obtener más información.',
+		url: '/servicios'
+	}
+	
+]
+
+
+import Card from "../components/Card.astro";
+
+---
+
+<BaseLayout titulo="Multipolimeros | Resinas y Materias Primas para Recubrimientos">
+	<section class="h-full">
+		<div class="banner">
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-5 my-8 text-center">
+			{
+				data.map(item => (
+					<Card titulo={item.titulo} imagen={item.imagen} contenido={item.contenido} url={item.url} />
+				))
+			}
+		</div>
+
+	</section>
+</BaseLayout>
+
+<style>
+	.banner {
+		background-image: url('/images/imageheroe.jpg');
+		background-size: cover;
+		background-position: center;
+		height: 40vh;
+		position: fixed;
+		width: 100%;
+		z-index: -1;
+
+	}
+</style>

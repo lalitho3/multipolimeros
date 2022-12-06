@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const res = await fetch('http://192.168.1.94:8080/productos/aplicacion?cantidad=20')
+
+const {productos} = await res.json()
+
+console.log(productos)
+
+---
+
+<BaseLayout titulo={'Multipolimeros | Productos por aplicación'}>
+
+    <h1 class="w-full my-4 p-4 text-2xl font-semibold text-white text-center bg-blue-800 border-b-4 border-orange-600">
+        Productos por aplicación
+    </h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-2">
+        {
+            productos.map((producto) => {
+                return (
+                    <div class="w-full p-4">
+                        <div class="bg-white border rounded shadow">
+                            <a href={`/productos/${producto.id}`}>
+                                <img class="w-full h-64 rounded-t" src={producto.imagen} />
+                            </a>
+                            <div class="p-4">
+                                <h3 class="text-xl font-bold text-gray-900">
+                                    <a href={`/productos/${producto.id}`}>
+                                        {producto.nombre}
+                                    </a>
+                                </h3>
+                                <p class="text-gray-500 uppercase my-2">
+                                    {producto.categoria}
+                                </p>
+                                <p class="text-blue-800">
+                                    $ {producto.precio}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                )
+            })
+        }
+    </div>
+
+</BaseLayout>
